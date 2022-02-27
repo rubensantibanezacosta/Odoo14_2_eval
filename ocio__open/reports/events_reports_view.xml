@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="ocio__open_ocio__open_events_report_template">
+            <t t-call="web.html_container">
+                <head>
+                    <style>
+                    table { 
+                    border: black 1px solid;
+                    border-spacing: 0px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    }
+                   
+                    table tr:nth-of-type(even) {
+                    background-color: grey;
+                    }
+                    tr {
+                    border: black 1px solid;
+                    border-spacing: 0px;
+                    }
+                   
+                    td {
+                    border: black 1px solid;
+                    border-spacing: 0px;
+                    }
+                    img{
+                        width:400px;
+                        height:400px;
+                        object-fit:cover;
+                    }
+                    </style>
+                </head>
+                <div class="page">
+                    <br />
+                    <t t-foreach='docs' t-as='o'>
+                        <table>
+                            <tr>
+                                <td align="center">
+                                    <b>
+                                        <span t-field="o.tittle" />
+                                    </b>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <b>
+                                        <span t-field="o.date" />
+                                    </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <b>
+                                        <span t-field="o.zone" />
+                                    </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <b>
+                                        <span t-field="o.place" />
+                                    </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <b>
+                                        <span t-field="o.description" />
+                                    </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <b>
+                                        <span t-field="o.punctuation_avg" />
+                                    </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <b>
+                                        <span t-field="o.organizer" />
+                                    </b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" align="left">
+                                    <img t-attf-src="data:image/*;base64,{{o.image_id.render}}" height="80px" />
+                                </td>
+                            </tr>
+                        </table>
+                    </t>
+                </div>
+            </t>
+        </template>
+
+    </data>
+</odoo>
+
+<!-- 
+image_id  -->

@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_ocio_events_gestor,ocio__open.ocio__open_events.gestor,model_ocio__open_ocio__open_events,ocio__open.grupo_gestor,1,1,1,1
+
+access_ocio_images_gestor,incidencias.ocio__open.ocio__open_images.gestor,model_ocio__open_ocio__open_images,ocio__open.grupo_gestor,1,1,1,1
+
+access_ocio_events_operario,ocio__open.ocio__open_events.operario,model_ocio__open_ocio__open_events,ocio__open.grupo_operario,1,0,0,0
+
+access_ocio_images_operario,incidencias.ocio__open.ocio__open_images.operario,model_ocio__open_ocio__open_images,ocio__open.grupo_operario,1,0,0,0 

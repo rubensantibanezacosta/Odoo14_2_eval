@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.actions.report" id="incidencias.incidencias_municipios_report">
+            <field name="name">Reporte Municipios</field>
+            <field name="model">incidencias.municipios</field>
+            <field name="report_type">qweb-html</field>
+            <field name="report_name">incidencias.municipios_report_template</field>
+            <field name="report_file">incidencias.municipios_report_template</field>
+            <field name="binding_model_id" ref="incidencias.model_incidencias_municipios" />
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>
+    

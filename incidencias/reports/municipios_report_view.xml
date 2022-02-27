@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="municipios_report_template">
+            <t t-call="web.html_container">
+                <div class="page">
+                    <br />
+                    <t t-foreach='docs' t-as='o'>
+                        <table>
+                            <tr>
+                                <td colspan="2" align="center">
+                                    <b>
+                                        <span t-field="o.name" />
+                                    </b>
+                                </td>
+                            </tr>
+                            <tr></tr>
+                            <tr t-foreach='o.incidencias' t-as='line'>
+                                <td width="200">
+                                    <span t-esc="line.cliente.name" />
+                                </td>
+                                <td width="200" align="center">
+                                    <span t-esc="line.fecha" />
+                                </td>
+
+                            </tr>
+                        </table>
+                    </t>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

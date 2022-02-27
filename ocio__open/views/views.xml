@@ -1,0 +1,252 @@
+<odoo>
+  <data>
+
+    <!-- VISTAS DE OCIO OPEN -->
+
+    <!-- VISTA HEREDADA RES.users CON Events -->
+    <record id="view_users_form_inherit_mail_users" model="ir.ui.view">
+      <field name="name">res.users.view.form.inherit.mail</field>
+      <field name="model">res.users</field>
+      <field name="inherit_id" ref="base.view_users_form" />
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='login']" position="after">
+          <p style="font-size:12px;">Puntuación</p>
+          <field name="punctuation_avg" style="color:blue; font-style:italic;" />
+          <p style="font-size:12px;">Última actividad</p>
+          <field name="lastconnection" style="color:blue; font-style:italic;" />
+          <p style="font-size:12px;">Eventos Organizados</p>
+          <field name="events" style="color:blue; font-weight:lighter; font-size:12px;" />
+          <p style="font-size:12px;">Modo oscuro</p>
+          <field name="dark_mode_boolean"/>
+        </xpath>
+      </field>
+    </record>
+
+
+    <!-- VISTAS DE EVENTOS SOCIALES -->
+    <record model="ir.ui.view" id="ocio__open.ocio__open_events_tree">
+      <field name="name">Eventos</field>
+      <field name="model">ocio__open.ocio__open_events</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="tittle" />
+          <field name="date" />
+          <field name="zone" />
+          <field name="description" />
+          <field name="punctuation_avg" />
+          <field name="organizer" />
+          <field name="image_id" />
+          <field name="createdAt" />
+          <field name="updatedAt" />
+
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="ocio__open.ocio__open_events_form">
+      <field name="name">Eventos</field>
+      <field name="model">ocio__open.ocio__open_events</field>
+      <field name="arch" type="xml">
+        <form>
+          <group colspan="2" col="2">
+            <field name="tittle" />
+            <field name="date" />
+            <field name="zone" />
+            <field name="description" />
+            <field name="punctuation_avg" />
+            <field name="organizer" />
+            <field name="image_id" />
+            <field name="createdAt" />
+            <field name="updatedAt" />
+          </group>
+          <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers" groups="base.group_user" />
+            <field name="activity_ids" widget="mail_activity" />
+            <field name="message_ids" widget="mail_thread" />
+          </div>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- VISTAS DE IMAGENES DE FONDO -->
+
+    <record model="ir.ui.view" id="ocio__open.ocio__open_images_tree">
+      <field name="name">Galería</field>
+      <field name="model">ocio__open.ocio__open_images</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="url" />
+          <field name="createdAt" />
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="ocio__open.ocio__open_images_form">
+      <field name="name">Galería</field>
+      <field name="model">ocio__open.ocio__open_images</field>
+      <field name="arch" type="xml">
+        <form>
+          <group colspan="2" col="2">
+            <field name="url" />
+            <field name="render" widget="image" />
+            <field name="createdAt" />
+          </group>
+        </form>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="ocio__open.ocio__open_images_kanban">
+      <field name="name">Imagenes</field>
+      <field name="model">ocio__open.ocio__open_images</field>
+      <field name="arch" type="xml">
+        <kanban>
+          <field name="id" />
+          <templates>
+            <t t-name="kanban-box">
+              <div class="oe_kanban_global_click">
+                <div class="o_kanban_image">
+                  <img t-att-src="kanban_image('ocio__open.ocio__open_images','render', record.id.raw_value)" />
+                </div>
+                <div class="oe-kanban-details">
+                  <strong>
+                    Url
+                    <br />
+                  </strong>
+                  <field name="url" />
+                </div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
+
+      </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="ocio__open.ocio__open_events_action_window">
+      <field name="name">Eventos</field>
+      <field name="res_model">ocio__open.ocio__open_events</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="ocio__open.ocio__open_images_action_window">
+      <field name="name">Galería</field>
+      <field name="res_model">ocio__open.ocio__open_images</field>
+      <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+
+    <!-- MENÚ PRINCIPAL APLICACIÓN OCIO OPEN -->
+    <menuitem name="Ocio Open" id="ocio__open.menu_root" />
+
+    <!-- SUBMENÚ OCIO OPEN -->
+    <menuitem name="Ocio Open" id="ocio__open.ocio__open_menu" parent="ocio__open.menu_root" />
+
+
+    <!-- OPCIONES DEL MENÚ -->
+    <menuitem name="Eventos" id="ocio__open.ocio__open_menu_events" parent="ocio__open.ocio__open_menu" action="ocio__open.ocio__open_events_action_window" />
+    <menuitem name="Imagenes" id="ocio__open.ocio__open_menu_images" parent="ocio__open.ocio__open_menu" action="ocio__open.ocio__open_images_action_window" />
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="ocio__open.action_window">
+      <field name="name">Ocio_Open window</field>
+      <field name="res_model">ocio__open.ocio__open</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="ocio__open.action_server">
+      <field name="name">Ocio_Open server</field>
+      <field name="model_id" ref="model_ocio__open_ocio__open"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="Ocio_Open" id="ocio__open.menu_root"/>
+-->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="ocio__open.menu_1" parent="ocio__open.menu_root"/>
+    <menuitem name="Menu 2" id="ocio__open.menu_2" parent="ocio__open.menu_root"/>
+-->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="ocio__open.menu_1_list" parent="ocio__open.menu_1"
+              action="ocio__open.action_window"/>
+    <menuitem name="Server to list" id="ocio__open" parent="ocio__open.menu_2"
+              action="ocio__open.action_server"/>
+-->
+
+
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="ocio__open.list">
+      <field name="name">Ocio_Open list</field>
+      <field name="model">ocio__open.ocio__open</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="ocio__open.action_window">
+      <field name="name">Ocio_Open window</field>
+      <field name="res_model">ocio__open.ocio__open</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="ocio__open.action_server">
+      <field name="name">Ocio_Open server</field>
+      <field name="model_id" ref="model_ocio__open_ocio__open"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="Ocio_Open" id="ocio__open.menu_root"/>
+-->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="ocio__open.menu_1" parent="ocio__open.menu_root"/>
+    <menuitem name="Menu 2" id="ocio__open.menu_2" parent="ocio__open.menu_root"/>
+-->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="ocio__open.menu_1_list" parent="ocio__open.menu_1"
+              action="ocio__open.action_window"/>
+    <menuitem name="Server to list" id="ocio__open" parent="ocio__open.menu_2"
+              action="ocio__open.action_server"/>
+-->
+  </data>
+</odoo>

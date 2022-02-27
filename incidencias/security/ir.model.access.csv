@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_incidencias_incidencias_gestor,incidencias.incidencias.gestor,model_incidencias_incidencias,incidencias.grupo_gestor,1,1,1,1
+
+access_incidencias_municipios_gestor,incidencias.municipios.gestor,model_incidencias_municipios,incidencias.grupo_gestor,1,1,1,1
+
+access_incidencias_incidencias_operario,incidencias.incidencias.operario,model_incidencias_incidencias,incidencias.grupo_operario,1,0,0,0
+
+access_incidencias_municipios_operario,incidencias.municipios.operario,model_incidencias_municipios,incidencias.grupo_operario,1,0,0,0 45

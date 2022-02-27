@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- GRUPO GESTOR DE INCIDENCIAS -->
+        <record id="grupo_gestor" model="res.groups">
+            <field name="name">Incidencias/Gestor incidencias</field>
+            <field name="comment">Perfil gestor de acceso a las incidencias</field>
+        </record>
+        <!-- GRUPO OPERARIO DE INCIDENCIAS -->
+        <record id="grupo_operario" model="res.groups">
+            <field name="name">Incidencias/Operario incidencias</field>
+            <field name="comment">Perfil operario de acceso a las incidencias</field>
+        </record>
+    </data>
+</odoo> 

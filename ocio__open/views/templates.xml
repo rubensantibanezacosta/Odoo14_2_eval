@@ -1,0 +1,30 @@
+<odoo>
+  <data>
+    <template id="assets_common" inherit_id="web.assets_common" name="My Colours">
+      <xpath expr="." position="inside">
+        <link rel="stylesheet" href="/ocio__open/static/src/scss/style1.scss" />
+        <script type="text/javascript" src="/ocio__open/static/src/js/darkMode.js"></script>
+      </xpath>
+    </template>
+    <!--
+        <template id="listing">
+          <ul>
+            <li t-foreach="objects" t-as="object">
+              <a t-attf-href="#{ root }/objects/#{ object.id }">
+                <t t-esc="object.display_name"/>
+              </a>
+            </li>
+          </ul>
+        </template>
+        <template id="object">
+          <h1><t t-esc="object.display_name"/></h1>
+          <dl>
+            <t t-foreach="object._fields" t-as="field">
+              <dt><t t-esc="field"/></dt>
+              <dd><t t-esc="object[field]"/></dd>
+            </t>
+          </dl>
+        </template>
+-->
+  </data>
+</odoo>

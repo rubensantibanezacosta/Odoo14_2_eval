@@ -1,0 +1,143 @@
+.o_main_navbar {
+  background-color: --orange !important;
+  .o_menu_brand {
+    color: black !important;
+  }
+}
+.o_content {
+  background-color: var(--gray-dark) !important;
+}
+
+.o_controller_with_searchpanel {
+  background-color: var(--gray-dark)!important ;
+}
+
+.o_kanban_record {
+  background-color: var(--o-cc1-link) !important;
+  border-radius: 6px ;
+  color: var(--white) ;
+}
+
+.o_NotificationList_preview {
+  background-color: black !important ;
+  color: var(--white) ;
+}
+
+.o_NotificationList_preview:hover {
+  background-color: rgb(41, 34, 34) !important ;
+  font-weight: bold;
+}
+
+body.dark {
+  --blue: #007bff ;
+  --indigo: #6610f2 ;
+  --purple: #6f42c1 ;
+  --pink: #e83e8c ;
+  --red: #dc3545 ;
+  --orange: #fd7e14 ;
+  --yellow: #ffc107 ;
+  --green: #28a745 ;
+  --teal: #20c997 ;
+  --cyan: #17a2b8 ;
+  --white: #030303 ;
+  --gray: #cfcfcf ;
+  --gray-dark: #a0a0a0 ;
+  --o-cc5-btn-secondary: #000000 ;
+  --o-cc5-headings: #0c0b0b ;
+  --o-cc5-bg: #8d8d8d ;
+  --o-cc4-btn-secondary: #000000 ;
+  --o-cc4-btn-primary: #a0a0a0 ;
+  --o-cc4-link: #0f0f0f ;
+  --o-cc4-bg: #3aadaa ;
+  --o-cc3-btn-secondary: #000000 ;
+  --o-cc3-bg: #7c6576 ;
+  --o-cc2-headings: #3aadaa ;
+  --o-cc2-bg: #000000 ;
+  --o-cc1-bg: #000000 ;
+  --o-color-5: #adadad ;
+  --o-color-4: #000000 ;
+  --o-color-3: #000000 ;
+  --o-color-2: #7c6576 ;
+  --o-color-1: #3aadaa ;
+  --primary: #7c7bad ;
+  --secondary: #000000 ;
+  --success: #28a745 ;
+  --info: #17a2b8 ;
+  --warning: #ffc107 ;
+  --danger: #dc3545 ;
+  --light: #000000 ;
+  --dark: #cfcfcf ;
+/* --100: #f8f9fa ;
+  --200: #000000 ;
+  --300: #000000 ;
+  --400: #000000 ;
+  --500: #1f1f1f ;
+  --600: #414141 ;
+  --700: #888888 ;
+  --800: #a8a8a8 ;
+  --900: #c4c4c4 ; */
+  --white-85: rgba(0, 0, 0, 0.85) ;
+  --white-75: rgba(0, 0, 0, 0.75) ;
+  --white-50: rgba(0, 0, 0, 0.5) ;
+  --white-25: rgba(0, 0, 0, 0.25) ;
+  --black-75: rgba(255, 255, 255, 0.75) ;
+  --black-50: rgba(255, 255, 255, 0.5) ;
+  --black-25: rgba(255, 255, 255, 0.25) ;
+  --black-15: rgba(255, 255, 255, 0.15) ;
+  --black: #ffffff ;
+  --white: #000000 ;
+  --o-cc1-text: #cecece ;
+  --o-cc1-headings: #cccccc ;
+  --o-cc1-h2: #c4c4c4 ;
+  --o-cc1-h3: #c4c4c4 ;
+  --o-cc1-h4: #c4c4c4 ;
+  --o-cc1-h5: #c4c4c4 ;
+  --o-cc1-h6: #c4c4c4 ;
+  --o-cc1-link: #343381 ;
+  --o-cc1-btn-primary: #3d3ba8 ;
+  --o-cc1-btn-primary-border: #7c7bad ;
+  --o-cc1-btn-secondary: #000000 ;
+  --o-cc1-btn-secondary-border: #000000 ;
+  --o-cc2-text: #383838 ;
+  --o-cc2-h2: #3aadaa ;
+  --o-cc2-h3: #3aadaa ;
+  --o-cc2-h4: #3aadaa ;
+  --o-cc2-h5: #3aadaa ;
+  --o-cc2-h6: #3aadaa ;
+  --o-cc2-link: #555487 ;
+  --o-cc2-btn-primary: #7c7bad ;
+  --o-cc2-btn-primary-border: #7c7bad ;
+  --o-cc2-btn-secondary: #000000 ;
+  --o-cc2-btn-secondary-border: #000000 ;
+  --o-cc3-text: #000000 ;
+  --o-cc3-headings: #000000 ;
+  --o-cc3-h2: #000000 ;
+  --o-cc3-h3: #000000 ;
+  --o-cc3-h4: #000000 ;
+  --o-cc3-h5: #000000 ;
+  --o-cc3-h6: #000000 ;
+  --o-cc3-link: #3f3f4d ;
+  --o-cc3-btn-primary: #37374d ;
+  --o-cc3-btn-primary-border: #41415a ;
+  --o-cc3-btn-secondary-border: #000000 ;
+  --o-cc4-text: #000000 ;
+  --o-cc4-headings: #000000 ;
+  --o-cc4-h2: #000000 ;
+  --o-cc4-h3: #000000 ;
+  --o-cc4-h4: #000000 ;
+  --o-cc4-h5: #000000 ;
+  --o-cc4-h6: #000000 ;
+  --o-cc4-link: #d1d1d1 ;
+  --o-cc4-btn-primary-border: #9aabbe ;
+  --o-cc4-btn-secondary-border: #000000 ;
+  --o-cc5-text: #000000 ;
+  --o-cc5-h2: #000000 ;
+  --o-cc5-h3: #000000 ;
+  --o-cc5-h4: #000000 ;
+  --o-cc5-h5: #000000 ;
+  --o-cc5-h6: #000000 ;
+  --o-cc5-link: #4c4b58 ;
+  --o-cc5-btn-primary: #3c3c53 ;
+  --o-cc5-btn-primary-border: #333346 ;
+  --o-cc5-btn-secondary-border: #000000 ;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- GRUPO GESTOR DE OCIO OPEN -->
+        <record id="grupo_gestor" model="res.groups">
+            <field name="name">Ocio Open/Gestor Ocio Open</field>
+            <field name="comment">Perfil gestor de acceso a Ocio Open</field>
+        </record>
+        <!-- GRUPO OPERARIO DE OCIO OPEN -->
+        <record id="grupo_operario" model="res.groups">
+            <field name="name">Ocio Open/Operario Ocio Open</field>
+            <field name="comment">Perfil operario de acceso a Ocio Open</field>
+        </record>
+    </data>
+</odoo> 

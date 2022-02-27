@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.report" id="ocio__open.ocio__open_ocio__open_events_report">
+            <field name="name">Reporte Eventos</field>
+            <field name="model">ocio__open.ocio__open_events</field>
+            <field name="report_type">qweb-html</field>
+            <field name="report_name">ocio__open.ocio__open_ocio__open_events_report_template</field>
+            <field name="report_file">ocio__open.ocio__open_ocio__open_events_report_template</field>
+            <field name="binding_model_id" ref="ocio__open.model_ocio__open_ocio__open_events" />
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

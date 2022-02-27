@@ -12,7 +12,7 @@ El proyecto consta de los Crud para gestionar eventos, carga de imagenes mediant
 
 ## Documentación del Proyecto
 
-- [Informe de requisitos de la aplicación](https://github.com/rubensantibanezacosta/Odoo-Ocio-Open-Crud/blob/main/docs/Requisitos.md)
+- [Informe de requisitos de la aplicación](https://github.com/rubensantibanezacosta/Odoo14_2_eval/blob/main/ocio__open/docs/Requisitos.md)
 
 ## Comenzando
 

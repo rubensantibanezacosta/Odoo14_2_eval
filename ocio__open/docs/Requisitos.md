@@ -11,3 +11,7 @@
    7. Adaptación a nuestro módulo de alguna funcionalidad implementada en algún módulo base de Odoo. 
    8. Creación de flujos de trabajo. 
    9. Aportaciones personales al módulo creado. 
+   10. Modificación de estilos base de Odoo
+   11. Inyección de javascript
+   12. Informes personalizados
+   13. Aplicaciones de terceros

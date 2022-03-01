@@ -87,7 +87,7 @@ Deberá extraer las carpetas que contiene el repositorio directamente en su carp
 Abra su nagegador el la dirección http://localhost:8069/
 
 
-En el buscador de Aplicaciones busque la aplicación ocio_open, incidencias, digital sign, web responsive, y reports whith trademark, e instálelas en el mismo orden.
+En el buscador de Aplicaciones busque la aplicación ocio_open, incidencias, digital sign, web responsive, y reports whith trademark, qr generator, e instálelas en el mismo orden.
 
 ![Captura de pantalla de 2021-12-05 18-38-52](https://user-images.githubusercontent.com/44450566/144759333-3de71503-c178-4413-94a1-a3b2db833b70.png)
 
@@ -130,6 +130,10 @@ Ahora podra crear un evento, y una vez creado, tendra una sección de comentario
 Podra imprimir informes de sus eventos:
 
 ![Captura de pantalla de 2022-02-27 19-37-25](https://user-images.githubusercontent.com/44450566/155897068-0140788e-8820-41b5-9162-9d337b6f09fb.png)
+
+Podra generar códigos QR a traves de una mini aplicación situada junto a las notificaciones:
+
+![Captura de pantalla de 2022-03-01 15-05-34](https://user-images.githubusercontent.com/44450566/156194195-a6a41fd1-55c0-41fd-ad1f-89756aea2f80.png)
 
 
 Debido a las aplicaciones de terceros que se han instalado, su aplicación sera adaptable a resoluciones móviles, dispondra de un campo para registrar la firma de sus usuarios, y se añadira una marca de agua a sus informes.
